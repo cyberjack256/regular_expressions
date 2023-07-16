@@ -44,22 +44,48 @@ Regular expressions are used for pattern matching. The range of uses in modern c
 
 Please navigate to [Regex101](https://regex101.com) and follow the instructions of the activity along with the instructor.
 
-**Classes:**
-- `[0-9a-zA-Z]` : All letters and numbers
-- `[a-zA-Z]` : All letters
-- `[\s]`	: Spaces and tabs
-- `[0-9]` : Digits 0 to 9
-- `[a-z]` : Lowercase letters
+## Regular Expression Syntax Patterns
 
-**Quantifiers:**
+Regular expressions use a variety of syntax patterns for matching. Here are some of the fundamental patterns:
 
-- `*`	: Zero or more matches (greedy)
-- `?`	: Zero or one match (lazy)
-- `+`	: One or more matches (greedy)
-- `{n}` : n matches
-- `{n,}` : n or more matches
-- `{,m}` : Up to m matches
-- `{n,m}` : From n up to m matches
+### Single Characters
+
+- `x` : The character x
+- `\\` : The backslash character
+- `\\0n` : The character with octal value 0n (0 <= n <= 7)
+- `\\xhh` : The character with hexadecimal value 0xhh
+- `\\t` : The tab character
+- `\\n` : The newline character
+
+### Character Classes
+
+- `[abc]` : a, b, or c (simple class)
+- `[^abc]` : Not a, b, or c (negated class)
+- `[a-zA-Z]` : a through z or A through Z, inclusive (range)
+
+### Predefined Character Classes
+
+- `.` : Any character except newline (unless given flag d)
+- `\\d` : A digit: [0-9]
+- `\\D` : A non-digit: [^0-9]
+- `\\s` : A whitespace character
+- `\\S` : A non-whitespace character
+- `\\w` : A word character: [a-zA-Z_0-9]
+- `\\W` : A non-word character (inverse of above, equivalent to [^a-zA-Z_0-9])
+
+### Quantifiers
+
+- `X?` : X, once or not at all
+- `X*` : X, zero or more times
+- `X+` : X, one or more times
+- `X{n}` : X, exactly n times
+- `X{n,}` : X, at least n times
+- `X{n,m}` : X, at least n times but not more than m times
+
+### Logical Operators
+
+- `XY` : X followed by Y
+- `X|Y` : Either X or Y
 
 **Note:** To match special characters like the `.`, use the `\` to escape the character to avoid interpretation.
 
