@@ -1,34 +1,34 @@
-# Regular Expressions for Triage: A Primer in Regular Expressions for Incident Responders
+# Regular Expressions for Triage: A Primer for Incident Responders
 
 ## Lesson Overview
 
-In this lesson, we aim to expand our incident response triage skill set by utilizing regular expressions for the initial analysis of datasets. We will parse logs, analyze datasets, and onboard logs into a data aggregation tool (Splunk Enterprise) using regular expressions.
+Welcome to an exciting journey into the world of regular expressions! In this lesson, we'll supercharge your incident response triage skills by using regular expressions to analyze datasets. Get ready to parse logs, scrutinize datasets, and onboard logs into Splunk Enterprise like a pro.
 
 ## Lesson Objectives
 
-By the end of this class, you should be able to:
+By the end of this class, you'll be able to:
 
 - Parse, interpret, and analyze data using fundamental Regular Expressions (Regex) syntax.
-- Leverage the power of Regex to navigate logs using the grep command.
-- Conduct field extraction and transformation of log files within Splunk Enterprise using Regex.
-- Identify references that will aid you in exploring additional Regular Expression Engines.
+- Harness the power of Regex to navigate logs with the `grep` command.
+- Perform field extraction and transformation of log files in Splunk Enterprise using Regex.
+- Identify resources to explore additional Regular Expression engines.
 
 ## Slide Show
 
-The slides for today's lesson can be found on GitHub: [Slides](https://github.com/cyberjack256/regular_expressions/blob/main/student_files/regular_expressions_for_triage_primer.pdf).
+Dive into today's lesson with our slides on GitHub: [Slides](https://github.com/cyberjack256/regular_expressions/blob/main/student_files/regular_expressions_for_triage_primer.pdf).
 
 ---
 
 ## 01. A Background in Regular Expressions
 
-Regular expressions have their roots in multiple fields of science. In 1943, American neurophysiologist and cybernetician Walter Pitts of the University of Illinois at Chicago, and self-taught logician and cognitive psychologist, published [A Logical Calculus of the Ideas Imminent in Nervous Activity](https://www.cse.chalmers.se/~coquand/AUTOMATA/mcp.pdf). In 1956, Mathematician Stephen Kleene developed a model of nerve nets and finite automata in a simple algebra, introducing sets and regular events into the field. In 1968, Unix Pioneer and programmer Ken Thompson published "Regular Expression Search Algorithm" using Kleene's notation in the QED editor. It became so cumbersome that it necessitated the release of a standalone program, and in 1973 he published grep (global search/regular expressions/print screen). In 1987, Larry Wall's Perl programming language helped Regular Expressions become mainstream. From there, Regular expressions have diverged into more than 30 regular expression engines that are in active production and/or active use.
+Regular expressions have fascinating roots in science. In 1943, Walter Pitts, an American neurophysiologist and cybernetician, co-authored [A Logical Calculus of the Ideas Immanent in Nervous Activity](https://www.cse.chalmers.se/~coquand/AUTOMATA/mcp.pdf). Fast forward to 1956, when mathematician Stephen Kleene introduced regular events into the field. Unix pioneer Ken Thompson took it further in 1968 with his "Regular Expression Search Algorithm," leading to the creation of `grep` in 1973. By 1987, Larry Wall's Perl programming language had brought Regular Expressions into the mainstream. Today, regular expressions power over 30 engines in active use.
 
 ### Use Cases for Regular Expressions
 
-Regular expressions are used for pattern matching. The range of uses in modern computing environments is so far-reaching that it would be impossible to list all of the use cases in this course, or any course. For example, regular expressions can check for the existence of specific patterns in:
+Regular expressions are the Swiss Army knife of pattern matching. Their applications are boundless, including:
 
 - URLs (Uniform Resource Locator)
-- Date/Time
+- Dates/Times
 - IP Addresses
 - Email Addresses
 - Social Security Numbers
@@ -37,16 +37,16 @@ Regular expressions are used for pattern matching. The range of uses in modern c
 ### Regular Expression Demonstrations
 
 - [Finding Credit Card Numbers with Regular Expressions](https://github.com/cyberjack256/regular_expressions/blob/main/student_files/unsolved/credit_card_number.md) (Group Activity)
-- [Parsing Logs in grep with Regular Expressions 1](https://github.com/cyberjack256/regular_expressions/blob/main/log_samples/1http.log)
-- [Parsing Logs in grep with Regular Expressions 2](https://github.com/cyberjack256/regular_expressions/blob/main/log_samples/2http.log) (Bonus as time permits)
-- [Parsing Logs in grep with Regular Expressions 3](https://github.com/cyberjack256/regular_expressions/blob/main/log_samples/computer_sid_objects.csv) (Bonus as time permits)
+- [Parsing Logs in `grep` with Regular Expressions 1](https://github.com/cyberjack256/regular_expressions/blob/main/log_samples/1http.log)
+- [Parsing Logs in `grep` with Regular Expressions 2](https://github.com/cyberjack256/regular_expressions/blob/main/log_samples/2http.log) (Bonus if time permits)
+- [Parsing Logs in `grep` with Regular Expressions 3](https://github.com/cyberjack256/regular_expressions/blob/main/log_samples/computer_sid_objects.csv) (Bonus if time permits)
 - [Parsing logs in Splunk with Regular Expressions](https://github.com/cyberjack256/regular_expressions/blob/main/log_samples/windows_event.log) (Unstructured Data Sets)
 
-Please navigate to [Regex101](https://regex101.com) and follow the instructions of the activity along with the instructor.
+Jump over to [Regex101](https://regex101.com) and follow along with the instructor for hands-on activities.
 
 ## Regular Expression Syntax Patterns
 
-Regular expressions use a variety of syntax patterns for matching. Here are some of the fundamental patterns:
+Regular expressions are all about patterns. Here's a quick guide to some fundamental patterns:
 
 ### Single Characters
 
@@ -87,15 +87,20 @@ Regular expressions use a variety of syntax patterns for matching. Here are some
 - `XY` : X followed by Y
 - `X|Y` : Either X or Y
 
-**Note:** To match special characters like the `.`, use the `\` to escape the character to avoid interpretation.
+**Pro Tip:** To match special characters like the `.`, use the `\` to escape the character and avoid interpretation.
 
 ## References
 
-These references are used throughout the course and should be helpful for following along with the demonstrations.
+These references will be your best friends throughout the course:
 
-1. [Regex101](https://regex101.com/) - Web application for testing regular expressions in multiple regular expression engines.
-2. [Debuggex Cheat-sheet](https://www.debuggex.com/cheatsheet/regex/pcre) - Cheat-sheet for PCRE regular expression engine.
-3. [ExplainShell](https://explainshell.com) - Simplified explanation of Linux bash command line.
-4. [Debuggex](https://www.debuggex.com/) - Logic diagramming and testing of regular expressions in multiple regular expression engines.
-5. [Ascii Table](https://www.asciitable.com/) - Ascii table.
-6. [List of Unicode Characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters) - Unicode table(s).
+1. [Regex101](https://regex101.com/) - A web app for testing regular expressions in multiple engines.
+2. [Debuggex Cheat-sheet](https://www.debuggex.com/cheatsheet/regex/pcre) - A handy cheat-sheet for the PCRE engine.
+3. [ExplainShell](https://explainshell.com) - Simplifies Linux bash command line explanations.
+4. [Debuggex](https://www.debuggex.com/) - Logic diagramming and testing of regular expressions.
+5. [Ascii Table](https://www.asciitable.com/) - The classic ASCII table.
+6. [List of Unicode Characters](https://en.wikipedia.org/wiki/List_of_Unicode_characters) - Comprehensive Unicode tables.
+7. [RegexOne](https://regexone.com/) - Interactive tutorials for learning regular expressions.
+
+---
+
+Dive into the world of regular expressions with confidence, and let's make data wrangling fun and efficient! 🌐💻✨
